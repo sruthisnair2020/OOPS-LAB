@@ -1,0 +1,31 @@
+class complex
+{
+	int real,img;
+	void read(int r,int i)
+	{
+		real=r;
+		img=i;
+	}
+	void dis()
+	{
+		System.out.println("Sum="+real+"+i"+img);
+	}
+	complex sum(complex n)
+	{
+		complex tmp=new complex();
+		tmp.real=this.real+n.real;
+		tmp.img=this.img+n.img;
+		return tmp;
+	}
+	public static void main(String[] args)
+	{
+		complex ob1=new complex();
+		complex ob2=new complex();
+		ob1.read(1,2);
+		ob2.read(3,4);
+		complex ob3=new complex();
+		ob3=ob1.sum(ob2);
+		ob3.dis();
+	}
+}
+		
